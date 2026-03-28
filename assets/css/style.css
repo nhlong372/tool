@@ -55,7 +55,8 @@ word-break: break-all; */}
 .feature i{font-size:3.2rem;color:var(--primary);margin-bottom:16px;}
 .feature p{font-weight:600;margin-bottom:8px;}
 .footer-content{text-align:center;color:var(--gray);font-size:0.95rem;margin-top:1rem;}
-.footer-info{}
+.footer-logo{}
+.footer-logo img{}
 .footer-copyright{}
 .footer-author{display:inline-block;}
 .footer-author span{font-weight:900;text-transform:uppercase;}
