@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Trình tạo bộ lọc màu CSS 🎨😎</title>
+    <link href="/assets//assets/images/color.png" rel="shortcut icon" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body data-theme="light">
+    <div class="container">
+      <!-- Header -->
+      <header class="header-content">
+        <div class="max-screen">
+          <nav>
+            <div class="logo">Toolors</div>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              title="Chuyển đổi sáng/tối"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div class="max-screen">
+          <div class="layout-content">
+            <div class="hero-container">
+              <h1>Trình tạo bộ lọc màu CSS</h1>
+              <p class="subtitle">
+                Nhập màu và tạo filter CSS tương ứng một cách chính xác cho các
+                biểu tượng hoặc hình ảnh đen.
+              </p>
+            </div>
+
+            <div class="grid-container">
+              <div class="grid-item">
+                <!-- Input -->
+                <div class="card input-card">
+                  <div class="execute-area">
+                    <div class="input-group">
+                      <div class="section-title">Chọn màu hoặc nhập mã màu</div>
+                      <div class="input-row">
+                        <input
+                          type="text"
+                          class="text-input target"
+                          placeholder="Nhập mã màu..."
+                          value="#00a4d6"
+                        />
+                        <div class="color-picker-box">
+                          <input
+                            type="color"
+                            class="color-picker"
+                            value="#00a4d6"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <button class="btn-generate execute">
+                      Tạo Filter
+                      <span class="material-symbols-img"
+                        ><img src="/assets/images/auto_fix_high.png" alt="Filter Icon"
+                      /></span>
+                    </button>
+
+                    <p class="hint">
+                      Hỗ trợ các màu đơn sắc: red, cyan, black... và mã HEX/RGB
+                    </p>
+                  </div>
+                </div>
+                <!-- Preview -->
+                <div class="preview-card">
+                  <div class="section-title">Xem trước</div>
+                  <div class="preview-row">
+                    <div class="preview-item">
+                      <span class="label-small before-label">Trước</span>
+                      <div class="icon-bg realPixel">
+                        <img
+                          src="/assets/images/controller.png"
+                          alt="Original Image"
+                          class="original-icon"
+                        />
+                      </div>
+                    </div>
+
+                    <span class="material-symbols-img"
+                      ><img src="/assets/images/arrow_forward.png" alt="Arrow Icon"
+                    /></span>
+
+                    <div class="preview-item">
+                      <span class="label-small after-label">Sau</span>
+                      <div class="icon-bg filterPixel">
+                        <img
+                          src="/assets/images/controller.png"
+                          alt="Filtered Image"
+                          class="filtered-icon"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Result -->
+              <div class="result-card">
+                <div class="result-header">
+                  <div class="section-title">Kết quả CSS</div>
+                  <button
+                    class="copy-btn"
+                    id="copyBtn"
+                    tooltip="Copy to clipboard"
+                  >
+                    <span class="material-symbols-icon"
+                      ><i class="fa-slab-press fa-regular fa-copy"></i
+                    ></span>
+                    Sao chép
+                  </button>
+                </div>
+                <div class="code-block filterDetail" id="cssCode">
+                  <!-- /* CSS filter code will be generated here */  -->
+                  /* Mã bộ lọc CSS sẽ được tạo tại đây */
+                </div>
+                <div class="status-block lossDetail">
+                  <!-- /* Loss details will be displayed here */ -->
+                  /* Điểm số sai lệch sẽ được hiển thị tại đây */
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="features">
+              <div class="feature">
+                <i class="fas fa-crosshairs"></i>
+                <p>Độ chính xác cao</p>
+                <small
+                  >Thuật toán tối ưu để bộ lọc CSS khớp nhất với màu mục tiêu
+                  của bạn.</small
+                >
+              </div>
+              <div class="feature">
+                <i class="fas fa-bolt"></i>
+                <p>Tức thì</p>
+                <small
+                  >Kết quả được tạo ngay lập tức sau khi chọn màu hoặc nhấn
+                  nút.</small
+                >
+              </div>
+              <div class="feature">
+                <i class="fas fa-code"></i>
+                <p>Dễ dàng tích hợp</p>
+                <small
+                  >Chỉ cần sao chép một dòng CSS và áp dụng cho bất kỳ phần tử
+                  HTML nào bạn muốn.</small
+                >
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer-content">
+        <div class="max-screen">
+          <div class="layout-footer">
+            <div class="footer-info">Toolors</div>
+            <div class="footer-copyright">
+              Copyright © 2026. All rights reserved. Designed by
+              <p class="footer-author">
+                Được làm bởi <span>người làm</span> 😆😎
+              </p>
+            </div>
+            <div class="footer-nonsensical">
+              Chào thân ái và quyết thắng 😎😎😋😋😆😆 (Warm regards and
+              victory!!!)
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/jquery2.min.js" type="text/javascript"></script>
+    <script src="/assets/js/js-filter.js" type="text/javascript"></script>
+    <script src="/assets/js/jquery-color.min.js" type="text/javascript"></script>
+    <!-- <script src="jquery.min.js" type="text/javascript"></script> -->
+  </body>
+</html>
