@@ -67,3 +67,8 @@ word-break: break-all; */}
 .copy-btn .material-symbols-icon{font-size:1rem;}
 /* .color-picker{position:relative;width:4rem;height:3.5rem;overflow:hidden;border-radius:8px;flex-shrink:0;} */
 .layout-footer{display:grid;padding:0.5rem 1rem;gap:0.25rem;justify-items:center;}
+a,input,textarea{outline:none;padding:0px;}
+img{max-width:100%;height:auto;vertical-align:top;}
+input,button,select{appearance:none;box-shadow:none!important;}
+.text-decoration{text-decoration:none!important;}
+.unstyle-ul{list-style:none;margin:0;padding:0;}
