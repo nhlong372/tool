@@ -448,20 +448,22 @@ $(document).ready(() => {
     let lossMsg;
 
     if (result.loss < 1) {
-      lossMsg = "Kết quả đạt độ chính xác hoàn hảo.!!!";//This is a perfect result.
+      lossMsg = "Kết quả đạt độ chính xác hoàn hảo.!!!"; //This is a perfect result.
     } else if (result.loss < 5) {
-      lossMsg = "Kết quả gần đạt chính xác.!!!";//The is close enough.
+      lossMsg = "Kết quả gần đạt chính xác.!!!"; //The is close enough.
     } else if (result.loss < 15) {
-      lossMsg = "Sai lệch màu ở mức trung bình. Hãy thử chạy lại.!!!";//The color is somewhat off. Consider running it again.
+      lossMsg = "Sai lệch màu ở mức trung bình. Hãy thử chạy lại.!!!"; //The color is somewhat off. Consider running it again.
     } else {
-      lossMsg = "Sai lệch màu nghiêm trọng. Vui lòng chạy lại.!!!";//The color is extremely off. Run it again!
+      lossMsg = "Sai lệch màu nghiêm trọng. Vui lòng chạy lại.!!!"; //The color is extremely off. Run it again!
     }
 
     $(".filterPixel img").attr("style", result.filter);
 
     $(".filterDetail").text(result.filter);
 
-    $(".lossDetail").html(`Điểm sai lệch: ${result.loss.toFixed(1)}. <b>${lossMsg}</b>`);//Loss:
+    $(".lossDetail").html(
+      `Điểm sai lệch: ${result.loss.toFixed(1)}. <b>${lossMsg}</b>`,
+    ); //Loss:
   });
 });
 
